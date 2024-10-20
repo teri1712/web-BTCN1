@@ -7,9 +7,10 @@
         height: 100%;
       }
       body {
-        margin: 0px;
+        margin: 0px auto;
         height: calc(100% - 20px);
         padding: 10px;
+        max-width: 1280px;
       }
       .header-wrapper {
         height: 66px;
@@ -56,7 +57,18 @@
         margin-top: 5px;
         margin-bottom: 5px;
         height: calc(100% - 33px - 66px - 10px);
+        width: 100%;
         background-color: lightgreen;
+      }
+
+      .side {
+        width: 256px;
+        height: 100%;
+        background-color: grey;
+      }
+      .main {
+        height: 100%;
+        background-color: orange;
       }
 
       .footer {
@@ -74,7 +86,12 @@
       </div>
       <hr />
     </div>
-    <div class="content"></div>
+    <table class="content">
+      <tr>
+        <td class="side"></td>
+        <td class="main"></td>
+      </tr>
+    </table>
     <div class="footer"></div>
   </body>
 </html>
