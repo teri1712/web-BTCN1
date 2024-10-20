@@ -76,10 +76,6 @@ function onNewsDragged(event, id) {
   };
 }
 
-/**
- * @param {HTMLElement} dragged
- * @param {HTMLElement} real
- */
 function inferPosition(dragged, real) {
   const side = document.querySelector(".side");
   const draggedRect = dragged.getBoundingClientRect();
@@ -89,11 +85,7 @@ function inferPosition(dragged, real) {
     if (news.style.position === "absolute") continue;
     if (newsRect.left > draggedRect.right || newsRect.right < draggedRect.left)
       return;
-    if (i == 0 && newsRect.top >= draggedRect.top) {
-      side.insertBefore(real, news);
-      return;
-    }
-    if (newsRect.top <= draggedRect.bottom && draggedRect.top <= newsRect.top) {
+    if (newsRect.top >= draggedRect.top) {
       side.insertBefore(real, news);
       return;
     }
