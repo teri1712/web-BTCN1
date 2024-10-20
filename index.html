@@ -53,6 +53,10 @@
         background-color: grey;
       }
 
+      td {
+        vertical-align: top;
+      }
+
       .content {
         margin-top: 5px;
         margin-bottom: 5px;
@@ -65,6 +69,33 @@
         width: 256px;
         height: 100%;
         background-color: grey;
+      }
+      .news {
+        display: block;
+        margin-bottom: 5px;
+        background-color: lightcoral;
+      }
+
+      .news > * {
+        padding: 5px;
+        margin: 0px;
+      }
+
+      .news-header {
+        height: 20px;
+        display: block;
+        text-align: center;
+        font-size: 20px;
+        background-color: violet;
+      }
+
+      .expand {
+        float: left;
+        background-color: aqua;
+      }
+      .drag {
+        float: right;
+        background-color: aqua;
       }
       .main {
         height: 100%;
@@ -88,7 +119,43 @@
     </div>
     <table class="content">
       <tr>
-        <td class="side"></td>
+        <td class="side">
+          <div class="news">
+            <div class="news-header">
+              <button class="expand">left</button>
+              NEWS 01
+              <button class="drag">right</button>
+            </div>
+            <p>Vai ca lon luon ae</p>
+          </div>
+
+          <div class="news">
+            <div class="news-header">
+              <button class="expand">left</button>
+              NEWS 01
+              <button class="drag">right</button>
+            </div>
+            <p>Vai ca lon luon ae</p>
+          </div>
+
+          <div class="news">
+            <div class="news-header">
+              <button class="expand">left</button>
+              NEWS 01
+              <button class="drag">right</button>
+            </div>
+            <p>Vai ca lon luon ae</p>
+          </div>
+
+          <div class="news">
+            <div class="news-header">
+              <button class="expand">left</button>
+              NEWS 01
+              <button class="drag">right</button>
+            </div>
+            <p>Vai ca lon luon ae</p>
+          </div>
+        </td>
         <td class="main"></td>
       </tr>
     </table>
