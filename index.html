@@ -15,32 +15,64 @@
       .header-wrapper {
         height: 66px;
         display: block;
-        background-color: lightblue;
         position: relative;
       }
 
       .header {
-        padding-top: 10px;
-        padding-bottom: 10px;
-        font-size: 20px;
-        letter-spacing: 0.2em;
+        padding-top: 12px;
+        padding-bottom: 15px;
+        position: relative;
         color: white;
+
         text-align: center;
-        background-color: blue;
+      }
+      .header-title {
+        position: relative;
+        text-shadow: 1px 1px 2px black;
+
+        letter-spacing: 0.2em;
+        font-size: 20px;
+        margin: 0;
+        padding: 0;
+        z-index: 2;
+      }
+
+      img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
       }
 
       .nav-wrapper {
         position: absolute;
         z-index: 2;
-        bottom: 10px;
+        bottom: 3px;
         width: 100%;
       }
 
       .nav {
         margin: 0 auto;
-        width: 500px;
-        height: 20px;
-        background-color: red;
+        width: 440px;
+        position: relative;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        padding-left: 10px;
+        padding-right: 10px;
+        overflow: hidden;
+      }
+      .nav-items {
+        float: left;
+        position: relative;
+        text-align: center;
+        height: 100%;
+        font-size: 14px;
+        z-index: 2;
+        list-style-type: none;
+        width: 100px;
+        box-sizing: border-box;
       }
 
       hr {
@@ -111,9 +143,23 @@
   </head>
   <body>
     <div class="header-wrapper">
-      <div class="header">Bài tập 1- 20120220</div>
+      <div class="header">
+        <img src="images/header-rounded-shadow.png" alt="" />
+        <p class="header-title">Bài tập 1- 20120220</p>
+      </div>
       <div class="nav-wrapper">
-        <div class="nav"></div>
+        <div class="nav">
+          <div class="nav-items" style="text-align: left; width: 70px">
+            Menu
+          </div>
+          <div class="nav-items">Menu</div>
+          <div class="nav-items">Menu</div>
+          <div class="nav-items">Menu</div>
+          <div class="nav-items" style="text-align: right; width: 70px">
+            Menu
+          </div>
+          <img src="images/nav-rounded-shadow.png" alt="" />
+        </div>
       </div>
       <hr />
     </div>
