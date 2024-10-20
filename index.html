@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <title>Document</title>
+    <script src="side-init.js"></script>
     <style>
       html {
         height: 100%;
@@ -93,14 +94,18 @@
         margin-bottom: 5px;
         height: calc(100% - 33px - 66px - 10px);
         width: 100%;
+        border-collapse: separate;
+        border-spacing: 5px;
       }
 
       .side {
         width: 256px;
         height: 100%;
+        position: relative;
+        padding: 0;
       }
       .news {
-        display: block;
+        width: 100%;
         margin-bottom: 5px;
         color: blue;
         font-size: 0.8em;
@@ -210,50 +215,50 @@
     <table class="content">
       <tr>
         <td class="side">
-          <div class="news">
+          <div class="news" id="news1">
             <div class="news-header">
-              <button class="expand">
+              <button class="expand" onclick="onNewsChanged('news1')">
                 <img src="images/close.png" alt="" />
               </button>
               NEWS 01
-              <button class="drag">
-                <img src="images/drag-white.png" alt="" />
+              <button class="drag" onmousedown="onNewsDragged(event,'news1')">
+                <img src="images/drag-white.png" alt="" draggable="false" />
               </button>
             </div>
             <p>Vai ca lon luon ae</p>
           </div>
-          <div class="news">
+          <div class="news" id="news2">
             <div class="news-header">
-              <button class="expand">
+              <button class="expand" onclick="onNewsChanged('news2')">
                 <img src="images/close.png" alt="" />
               </button>
-              NEWS 01
-              <button class="drag">
-                <img src="images/drag-white.png" alt="" />
+              NEWS 02
+              <button class="drag" onmousedown="onNewsDragged(event,'news2')">
+                <img src="images/drag-white.png" alt="" draggable="false" />
               </button>
             </div>
             <p>Vai ca lon luon ae</p>
           </div>
-          <div class="news">
+          <div class="news" id="news3">
             <div class="news-header">
-              <button class="expand">
-                <img src="images/close.png" alt="" />
+              <button class="expand" onclick="onNewsChanged('news3')">
+                <img src="images/close.png" alt="" draggable="false" />
               </button>
-              NEWS 01
-              <button class="drag">
-                <img src="images/drag-white.png" alt="" />
+              NEWS 03
+              <button class="drag" onmousedown="onNewsDragged(event,'news3')">
+                <img src="images/drag-white.png" alt="" draggable="false" />
               </button>
             </div>
             <p>Vai ca lon luon ae</p>
           </div>
-          <div class="news">
+          <div class="news" id="news4">
             <div class="news-header">
-              <button class="expand">
+              <button class="expand" onclick="onNewsChanged('news4')">
                 <img src="images/close.png" alt="" />
               </button>
-              NEWS 01
-              <button class="drag">
-                <img src="images/drag-white.png" alt="" />
+              NEWS 04
+              <button class="drag" onmousedown="onNewsDragged(event,'news4')">
+                <img src="images/drag-white.png" alt="" draggable="false" />
               </button>
             </div>
             <p>Vai ca lon luon ae</p>
