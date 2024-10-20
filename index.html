@@ -1,9 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      html {
+        height: 100%;
+      }
+      body {
+        margin: 0px;
+        height: calc(100% - 20px);
+        padding: 10px;
+      }
+      .header-wrapper {
+        height: 66px;
+        display: block;
+        background-color: lightblue;
+      }
+
+      .header {
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+        background-color: blue;
+      }
+
+      .content {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        height: calc(100% - 33px - 66px - 10px);
+        background-color: lightgreen;
+      }
+
+      .footer {
+        height: 33px;
+        display: block;
+        background-color: lightcoral;
+      }
+      hr {
+        margin: 0;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <div class="header-wrapper">
+      <div class="header">
+        <p>Bài tập 1- 20120220</p>
+      </div>
+      <hr />
+    </div>
+    <div class="content"></div>
+    <div class="footer"></div>
+  </body>
 </html>
