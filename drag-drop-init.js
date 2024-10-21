@@ -112,9 +112,9 @@ function onDragTurnOn(event, id) {
 
   switchDragState(true);
   const real = card_container.querySelector("#" + id);
+  real.style.border = "2px dashed grey";
   currentShadow = shadow_container.querySelector("#" + id + "-shadow");
   currentShadow.style.zIndex = 1000;
-  console.log(card_container.textContent);
 
   const x = event.clientX;
   const y = event.clientY;
@@ -142,6 +142,7 @@ function onDragTurnOn(event, id) {
   currentShadow.onmouseup = function (e) {
     currentShadow.onmousemove = null;
     currentShadow.onmouseup = null;
+    real.style.border = "none";
     moveForwards(currentShadow);
   };
 }
@@ -150,9 +151,6 @@ function checkCanDrop(currentPos) {
   const draggedRect = currentShadow.getBoundingClientRect();
   const card_container = document.getElementById("card-container");
 
-  console.log(currentPos);
-  console.log(card_container.textContent);
-
   const total = card_container.children.length;
   let nextPos;
   for (nextPos = 0; nextPos < total; nextPos++) {
@@ -160,21 +158,26 @@ function checkCanDrop(currentPos) {
     const card_rect = card.getBoundingClientRect();
     if (
       card_rect.left <= draggedRect.left &&
-      card_rect.right >= draggedRect.left
+      card_rect.right >= draggedRect.left &&
+      card_rect.top <= draggedRect.top &&
+      card_rect.bottom >= draggedRect.top
     ) {
       break;
     }
   }
-  if (currentPos == nextPos) return;
 
+  if (currentPos == nextPos || nextPos == total) return;
   const real = card_container.children[currentPos];
-
-  if (nextPos == total) {
-    console.log("vccccccccccccccc");
-    card_container.appendChild(real);
-  } else {
+  if (nextPos < currentPos) {
     const ahead = card_container.children[nextPos];
     card_container.insertBefore(real, ahead);
+  } else {
+    if (nextPos == total - 1) {
+      card_container.appendChild(real);
+    } else {
+      const ahead = card_container.children[nextPos + 1];
+      card_container.insertBefore(real, ahead);
+    }
   }
 
   for (let i = 0; i < total; i++) {
@@ -214,17 +217,20 @@ function moveForwards(shadow) {
   let current_x = 0;
   let current_y = 0;
 
-  if (width == 0) return;
+  if (width == 0 && height == 0) return;
 
   const intervalId = setInterval(moveElement, 20);
   shadow.intervalId = intervalId;
   function moveElement() {
-    current_x += (20 * width) / 200;
-    current_y += (20 * height) / 200;
+    current_x += (20 * width) / 300;
+    current_y += (20 * height) / 300;
 
     shadow.style.left = offsetLeft + current_x + "px";
     shadow.style.top = offsetTop + current_y + "px";
     if (Math.abs(current_x) >= Math.abs(width)) {
+      shadow.style.left = next.offsetLeft + "px";
+      shadow.style.top = next.offsetTop + "px";
+
       clearInterval(intervalId);
       shadow.intervalId = null;
       if (currentShadow === shadow) {

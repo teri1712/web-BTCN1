@@ -10,14 +10,14 @@ function onMenuChanged(id) {
 }
 
 function modify(id) {
-  const navMenu = document.getElementById(id);
-  const footerMenu = document.getElementById("footer-" + id).querySelector("p");
+  const navMenu = $("#" + id);
+  const footerMenu = $("#footer-" + id).find("p");
   const active = currentMenu === id;
   if (active) {
-    navMenu.classList.add("nav-item-active");
-    footerMenu.classList.add("footer-item-active");
+    navMenu.addClass("nav-item-active");
+    footerMenu.addClass("footer-item-active");
   } else {
-    navMenu.classList.remove("nav-item-active");
-    footerMenu.classList.remove("footer-item-active");
+    navMenu.removeClass("nav-item-active");
+    footerMenu.removeClass("footer-item-active");
   }
 }
