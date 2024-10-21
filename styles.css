@@ -253,8 +253,8 @@ input {
 }
 
 .sample-text {
-  color: red;
-  background-color: yellow;
+  color: #ff0000;
+  background-color: #ffff00;
   font-size: 14px;
   padding-top: 2px;
   box-sizing: border-box;
@@ -280,7 +280,8 @@ input {
 }
 .middle-content {
   height: 100%;
-  min-width: 300px;
+  width: 300px;
+
   padding: 0;
   margin: 0 auto;
 }
@@ -299,7 +300,7 @@ input[type="text"] {
 }
 
 .middle-content button {
-  background: url("images/button-rounded.png");
+  background: url("images/button-blue-rounded.png");
   font-size: 11px;
   color: white;
 }

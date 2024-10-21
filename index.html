@@ -7,6 +7,7 @@
 
     <script src="side-init.js"></script>
     <script src="nav-init.js"></script>
+    <script src="process-text-init.js"></script>
   </head>
   <body>
     <div class="header-wrapper">
@@ -108,31 +109,47 @@
             />
             <div class="pannel">
               <strong class="command-left">Process Text</strong>
-              <button class="command-right">
+              <button
+                class="command-right"
+                id="tool"
+                onclick="onClickToolMenu()"
+              >
                 <img class="tool" src="images/tool.png" alt="" />
               </button>
               <input
+                id="text-color"
                 class="command-right general-command"
                 type="color"
-                value="red"
+                value="#ff0000"
+                oninput="onTextColorChanged()"
               />
-              <p class="command-right general-command sample-text">
+              <p
+                id="sample-text"
+                class="command-right general-command sample-text"
+              >
                 Sample Text
               </p>
               <div class="middle">
                 <div class="middle-content">
                   <input
+                    id="regex-field"
                     type="text"
                     class="middle-command"
                     style="width: 100px"
                   />
-                  <button class="middle-command">highlight</button>
-                  <button class="middle-command">delete</button>
-                  <button class="middle-command">reset</button>
+                  <button class="middle-command" onclick="performHighlight()">
+                    highlight
+                  </button>
+                  <button class="middle-command" onclick="performDelete()">
+                    delete
+                  </button>
+                  <button class="middle-command" onclick="performReset()">
+                    reset
+                  </button>
                 </div>
               </div>
             </div>
-            <p class="main-content">
+            <p id="paragraph-content" class="main-content">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu
               nisl et urna efficitur aliquam. In rutrum tortor urna, sed aliquam
               lacus faucibus vel. Integer sit amet elementum purus. Vestibulum
@@ -206,10 +223,23 @@
       </div>
     </div>
     <div class="sample-text-selection">
-      <label><input type="checkbox" /> Bold</label>
-      <label><input type="checkbox" /> Italic</label>
-      <label><input type="checkbox" /> Underline</label>
-      <label><input type="color" value="#ffff00" /> Background</label>
+      <label><input type="checkbox" onchange="onBoldChanged()" /> Bold</label>
+      <label
+        ><input type="checkbox" onchange="onItalicChanged()" /> Italic</label
+      >
+      <label
+        ><input type="checkbox" onchange="onUnderlineChanged()" />
+        Underline</label
+      >
+      <label
+        ><input
+          id="text-background"
+          type="color"
+          value="#ffff00"
+          oninput="onBackgroundColorChanged()"
+        />
+        Background</label
+      >
     </div>
   </body>
 </html>
