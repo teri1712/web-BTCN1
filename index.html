@@ -206,7 +206,7 @@
             <img
               class="background"
               src="images/panel-frame-rounded.png"
-              style="max-height: 400px"
+              style="max-height: 420px"
               alt=""
             />
             <div class="pannel">
@@ -224,6 +224,7 @@
                   ></select>
 
                   <button
+                    onclick="addAnimal()"
                     class="middle-command blue-button"
                     style="background: none; position: relative"
                   >
@@ -245,12 +246,49 @@
               </div>
             </div>
             <div class="main-content">
-              <div class="card">
-                <div class="card-background"></div>
-                <p>capybara</p>
+              <div id="card-container">
+                <div
+                  id="capybara"
+                  class="card"
+                  onmousedown="onDragTurnOn(event,'capybara')"
+                >
+                  <div class="card-background">
+                    <img
+                      draggable="false"
+                      src="images/animals/capybara-shadow.png"
+                      alt=""
+                    />
+                  </div>
+                  <p>capybara</p>
+                </div>
               </div>
-              <div class="card"></div>
-              <div class="card"></div>
+              <div id="shadow-container" class="shadow-container">
+                <div
+                  id="capybara-shadow"
+                  class="card"
+                  style="position: absolute; left: 0"
+                >
+                  <div class="card-background">
+                    <img
+                      draggable="false"
+                      src="images/animals/capybara-shadow.png"
+                      alt=""
+                    />
+                  </div>
+                  <p>capybara</p>
+                </div>
+
+                <!-- <div
+                  style="
+                    background-color: red;
+                    width: 100px;
+                    height: 100px;
+                    top: 0;
+                    left: 0;
+                    position: absolute;
+                  "
+                ></div> -->
+              </div>
             </div>
           </div>
         </td>
@@ -315,20 +353,20 @@
       />
       <label> Background</label>
     </div>
-  </body>
 
-  <div id="icon-list" class="dropdown-icon-list">
-    <div
-      class="dropdown-icon capybara"
-      onmousedown="onAnimalChanged('capy')"
-    ></div>
-    <div
-      class="dropdown-icon aligato"
-      onmousedown="onAnimalChanged('aligato')"
-    ></div>
-    <div
-      class="dropdown-icon buffalo"
-      onmousedown="onAnimalChanged('buffalo')"
-    ></div>
-  </div>
+    <div id="icon-list" class="dropdown-icon-list">
+      <div
+        class="dropdown-icon capybara"
+        onmousedown="onAnimalChanged('capy')"
+      ></div>
+      <div
+        class="dropdown-icon aligato"
+        onmousedown="onAnimalChanged('aligato')"
+      ></div>
+      <div
+        class="dropdown-icon buffalo"
+        onmousedown="onAnimalChanged('buffalo')"
+      ></div>
+    </div>
+  </body>
 </html>
