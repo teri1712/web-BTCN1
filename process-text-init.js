@@ -19,7 +19,7 @@ function onClickToolMenu() {
       (rect.left + rect.right - menu.getBoundingClientRect().width) / 2 -
       20 +
       "px";
-    menu.style.top = rect.bottom + 5 + "px";
+    menu.style.top = rect.bottom + "px";
     menu.style.visibility = "visible";
   } else {
     menu.style.visibility = "hidden";
@@ -28,6 +28,7 @@ function onClickToolMenu() {
 function performHighlight() {
   const regexField = document.getElementById("regex-field");
   const regexPattern = regexField.value;
+  if (regexPattern.length === 0) return;
   let regex;
 
   try {
@@ -63,6 +64,8 @@ function performReset() {
 function performDelete() {
   const regexField = document.getElementById("regex-field");
   const regexPattern = regexField.value;
+  if (regexPattern.length === 0) return;
+
   let regex;
 
   try {

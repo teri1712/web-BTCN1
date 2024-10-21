@@ -5,6 +5,7 @@ body {
   margin: 0px auto;
   height: calc(100% - 20px);
   padding: 10px;
+  min-width: 768px;
   max-width: 1280px;
 }
 .header-wrapper {
@@ -247,7 +248,6 @@ p.copyright {
 .command-right {
   float: right;
 }
-
 input {
   padding: 0;
 }
@@ -258,6 +258,10 @@ input {
   font-size: 14px;
   padding-top: 2px;
   box-sizing: border-box;
+}
+
+.blue-button:active {
+  color: lightblue;
 }
 
 .middle {
@@ -272,18 +276,19 @@ input {
   margin-right: 174px;
   box-sizing: border-box;
 }
+
+.middle-content {
+  height: 100%;
+  width: 305px;
+
+  padding: 0;
+  margin: 0 auto;
+}
 .middle-command {
   min-width: 60px;
   margin-top: 0;
   margin-bottom: 0;
   height: 100%;
-}
-.middle-content {
-  height: 100%;
-  width: 300px;
-
-  padding: 0;
-  margin: 0 auto;
 }
 
 input[type="text"] {
@@ -310,18 +315,95 @@ input[type="text"] {
   background-color: lightblue;
   width: 120px;
   height: 100px;
+  padding-top: 10px;
   top: 0;
   z-index: 5;
   visibility: hidden;
 }
-
 label {
-  display: block;
-  font-size: 13px;
+  font-size: 12px;
+}
+.sample-text-selection input[type="checkbox"] {
+  border: none;
+  vertical-align: middle;
 }
 
 .sample-text-selection input[type="color"] {
   margin: 5px;
   height: 20px;
   width: 35px;
+}
+
+select {
+  height: 100%;
+  width: 80px;
+  padding: 0;
+  background: url("images/animals/capybara-small.png") no-repeat center;
+  background-color: white;
+  border-color: blue;
+}
+
+option {
+  height: 29px;
+}
+
+.dropdown-icon-list {
+  width: 82px;
+  padding: 0;
+  height: 89px;
+
+  position: absolute;
+  top: 0;
+
+  background: url("images/dropdown.png");
+  z-index: 1000;
+  visibility: hidden;
+}
+
+.dropdown-icon {
+  display: block;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  background: url("images/animals/capybara-small.png") no-repeat center;
+  width: 80px;
+  height: 29px;
+}
+
+.dropdown-icon:hover {
+  background-color: #2e6dff;
+}
+
+.capybara {
+  background: url("images/animals/capybara-small.png") no-repeat center;
+}
+
+.aligato {
+  background: url("images/animals/crocodile-small.png") no-repeat center;
+}
+
+.buffalo {
+  background: url("images/animals/buffalo-small.png") no-repeat center;
+}
+
+.card {
+  width: 180px;
+  height: 120px;
+  float: left;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  background-color: aqua;
+  border: 2px dashed grey;
+}
+
+.card-background {
+  height: 90px;
+  width: 100%;
+  background-color: red;
+}
+
+.card p {
+  margin-top: 5px;
+  text-align: center;
+  font-size: 13px;
 }

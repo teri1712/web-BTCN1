@@ -8,6 +8,7 @@
     <script src="side-init.js"></script>
     <script src="nav-init.js"></script>
     <script src="process-text-init.js"></script>
+    <script src="drag-drop-init.js"></script>
   </head>
   <body>
     <div class="header-wrapper">
@@ -60,7 +61,11 @@
                 <img src="images/drag-white.png" alt="" draggable="false" />
               </button>
             </div>
-            <p>Vai ca lon luon ae</p>
+            <p>
+              A random paragraph can also be an excellent way for a writer to
+              tackle writers' block. Writing block can often happen due to being
+              stuck with a current project that the writer is trying to complete
+            </p>
           </div>
           <div class="news" id="news2">
             <div class="news-header">
@@ -72,7 +77,12 @@
                 <img src="images/drag-white.png" alt="" draggable="false" />
               </button>
             </div>
-            <p>Vai ca lon luon ae</p>
+            <p>
+              Another productive way to use this tool to begin a daily writing
+              routine. One way is to generate a random paragraph with the
+              intention to try to rewrite it while still keeping the original
+              meaning.
+            </p>
           </div>
           <div class="news" id="news3">
             <div class="news-header">
@@ -84,7 +94,13 @@
                 <img src="images/drag-white.png" alt="" draggable="false" />
               </button>
             </div>
-            <p>Vai ca lon luon ae</p>
+            <p>
+              It's not only writers who can benefit from this free online tool.
+              If you're a programmer who's working on a project where blocks of
+              text are needed, this tool can be a great way to get that. It's a
+              good way to test your programming and that the tool being created
+              is working well.
+            </p>
           </div>
           <div class="news" id="news4">
             <div class="news-header">
@@ -96,7 +112,14 @@
                 <img src="images/drag-white.png" alt="" draggable="false" />
               </button>
             </div>
-            <p>Vai ca lon luon ae</p>
+            <p>
+              No! All of the paragraphs in the generator are written by humans,
+              not computers. When first building this generator we thought about
+              using computers to generate the paragraphs, but they weren't very
+              good and many times didn't make any sense at all. We therefore
+              took the time to create paragraphs specifically for this generator
+              to make it the best that we could.
+            </p>
           </div>
         </td>
         <td class="main">
@@ -137,13 +160,22 @@
                     class="middle-command"
                     style="width: 100px"
                   />
-                  <button class="middle-command" onclick="performHighlight()">
+                  <button
+                    class="middle-command blue-button"
+                    onclick="performHighlight()"
+                  >
                     highlight
                   </button>
-                  <button class="middle-command" onclick="performDelete()">
+                  <button
+                    class="middle-command blue-button"
+                    onclick="performDelete()"
+                  >
                     delete
                   </button>
-                  <button class="middle-command" onclick="performReset()">
+                  <button
+                    class="middle-command blue-button"
+                    onclick="performReset()"
+                  >
                     reset
                   </button>
                 </div>
@@ -177,6 +209,49 @@
               style="max-height: 400px"
               alt=""
             />
+            <div class="pannel">
+              <strong class="command-left">Drag & Drop</strong>
+              <div
+                class="middle"
+                style="margin-right: 0; padding-top: 0; padding-bottom: 0"
+              >
+                <div class="middle-content">
+                  <select
+                    id="dropdown"
+                    name="dropdown"
+                    onblur="onDropdownBlur()"
+                    onmousedown="onDropdownClick(event)"
+                  ></select>
+
+                  <button
+                    class="middle-command blue-button"
+                    style="background: none; position: relative"
+                  >
+                    <img
+                      src="images/button-blue-rounded.png"
+                      alt=""
+                      style="
+                        position: absolute;
+                        z-index: -1;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                      "
+                    />
+                    ADD NEW
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="main-content">
+              <div class="card">
+                <div class="card-background"></div>
+                <p>capybara</p>
+              </div>
+              <div class="card"></div>
+              <div class="card"></div>
+            </div>
           </div>
         </td>
       </tr>
@@ -223,23 +298,37 @@
       </div>
     </div>
     <div class="sample-text-selection">
-      <label><input type="checkbox" onchange="onBoldChanged()" /> Bold</label>
-      <label
-        ><input type="checkbox" onchange="onItalicChanged()" /> Italic</label
-      >
-      <label
-        ><input type="checkbox" onchange="onUnderlineChanged()" />
-        Underline</label
-      >
-      <label
-        ><input
-          id="text-background"
-          type="color"
-          value="#ffff00"
-          oninput="onBackgroundColorChanged()"
-        />
-        Background</label
-      >
+      <input type="checkbox" onchange="onBoldChanged()" />
+      <label>Bold</label>
+      <br />
+      <input type="checkbox" onchange="onItalicChanged()" />
+      <label> Italic</label>
+      <br />
+      <input type="checkbox" onchange="onUnderlineChanged()" />
+      <label> Underline</label>
+      <br />
+      <input
+        id="text-background"
+        type="color"
+        value="#ffff00"
+        oninput="onBackgroundColorChanged()"
+      />
+      <label> Background</label>
     </div>
   </body>
+
+  <div id="icon-list" class="dropdown-icon-list">
+    <div
+      class="dropdown-icon capybara"
+      onmousedown="onAnimalChanged('capy')"
+    ></div>
+    <div
+      class="dropdown-icon aligato"
+      onmousedown="onAnimalChanged('aligato')"
+    ></div>
+    <div
+      class="dropdown-icon buffalo"
+      onmousedown="onAnimalChanged('buffalo')"
+    ></div>
+  </div>
 </html>
