@@ -1,0 +1,77 @@
+commit 1a98c176cab25ec4f15923e037a35e7ae665c172
+Author: decade <20120220@student.hcmus.edu.vn>
+Date:   Mon Oct 21 21:11:44 2024 +0700
+
+    finish
+
+commit 61221582e7945bd83acef554918d75ef6907f922
+Author: decade <20120220@student.hcmus.edu.vn>
+Date:   Mon Oct 21 19:47:04 2024 +0700
+
+    ?????
+
+commit 91e8afcf65f0fbf9e0df1eebc5ef0a8b9a4b822d
+Author: decade <20120220@student.hcmus.edu.vn>
+Date:   Mon Oct 21 15:47:10 2024 +0700
+
+    drrag and drop
+
+commit 8f3855d9136caf2caa0dde76f2597c7f28eabe34
+Author: decade <20120220@student.hcmus.edu.vn>
+Date:   Mon Oct 21 07:27:03 2024 +0700
+
+    finish process text
+
+commit 5a836e57a23e1c66fa0a2b663f569031ffadc2d8
+Author: decade <20120220@student.hcmus.edu.vn>
+Date:   Mon Oct 21 05:50:50 2024 +0700
+
+    70%
+
+commit 33f5fd5c5bfaa741fcbb00b89d70551512bc7e04
+Author: decade <20120220@student.hcmus.edu.vn>
+Date:   Mon Oct 21 02:06:43 2024 +0700
+
+    finish news dragging
+
+commit 17629e033fb84bedd7fc3fddcefd00477690be46
+Author: decade <20120220@student.hcmus.edu.vn>
+Date:   Sun Oct 20 23:46:51 2024 +0700
+
+    footer+side
+
+commit 7f34578e4318812311a3fed86df8002c2bcb6304
+Author: decade <20120220@student.hcmus.edu.vn>
+Date:   Sun Oct 20 22:12:14 2024 +0700
+
+    headers
+
+commit b4f2adb544b10ec0410dde1ca158e21606aa8882
+Author: decade <20120220@student.hcmus.edu.vn>
+Date:   Sun Oct 20 19:29:46 2024 +0700
+
+    side bar
+
+commit 99f6093e57495211d419b8965cab9dbe013fa968
+Author: decade <20120220@student.hcmus.edu.vn>
+Date:   Sun Oct 20 18:51:21 2024 +0700
+
+    content layout using table
+
+commit 47b810e2355255d965081c4b0065126d966ecd50
+Author: decade <20120220@student.hcmus.edu.vn>
+Date:   Sun Oct 20 18:30:45 2024 +0700
+
+    nav layout complete
+
+commit 261533ff8bc35bef7183dbbfb601bf9d1eaa8292
+Author: decade <20120220@student.hcmus.edu.vn>
+Date:   Sun Oct 20 17:46:25 2024 +0700
+
+    layout
+
+commit 149cdc5d35157e9182980c44e050c39debbcf4df
+Author: decade <20120220@student.hcmus.edu.vn>
+Date:   Sun Oct 20 05:47:07 2024 +0700
+
+    index page

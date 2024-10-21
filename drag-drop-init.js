@@ -1,4 +1,5 @@
 let focused = false;
+
 function onDropdownClick(event) {
   event.preventDefault();
   if (focused) {
@@ -6,21 +7,24 @@ function onDropdownClick(event) {
     return;
   }
   focused = true;
-  const select = document.getElementById("dropdown");
-  const icon_list = document.getElementById("icon-list");
+  const $select = $("#dropdown");
+  const $icon_list = $("#icon-list");
 
-  const rec = select.getBoundingClientRect();
+  const rec = $select[0].getBoundingClientRect();
 
-  icon_list.style.left = rec.left + "px";
-  icon_list.style.top = rec.bottom + window.scrollY + "px";
+  $icon_list.css({
+    left: rec.left + "px",
+    top: rec.bottom + $(window).scrollTop() + "px",
+    visibility: "visible",
+  });
 
-  icon_list.style.visibility = "visible";
-  select.focus();
+  $select.focus();
 }
+
 function onDropdownBlur() {
   focused = false;
-  const icon_list = document.getElementById("icon-list");
-  icon_list.style.visibility = "hidden";
+  const $icon_list = $("#icon-list");
+  $icon_list.css("visibility", "hidden");
 }
 
 let currrentAnimal = "capy";
